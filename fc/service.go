@@ -4,16 +4,17 @@ package fc
 
 import (
 	"encoding/xml"
-	"github.com/widgetii/gowsdl/soap"
 	"time"
+
+	"github.com/widgetii/gowsdl/soap"
 )
 
 // against "unused imports"
 var _ time.Time
 var _ xml.Name
 
-type PositiveInteger uint;
-type NonNegativeInteger int;
+type PositiveInteger uint
+type NonNegativeInteger int
 
 type LanguageData struct {
 	XMLName xml.Name `xml:"http://fclient.russianpost.org/postserver LanguageData"`
@@ -38,7 +39,7 @@ type TicketRequest struct {
 }
 
 type AnswerByTicketRequest struct {
-	XMLName xml.Name `xml:"http://fclient.russianpost.org/postserver answerByTicketRequest"`
+	XMLName xml.Name `xml:"ns0:answerByTicketRequest"`
 
 	Ticket string `xml:"ticket,omitempty"`
 
